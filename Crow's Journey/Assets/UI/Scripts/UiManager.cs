@@ -19,6 +19,7 @@ public class UiManager : MonoBehaviour
     public GameObject trapEncountered;
     public GameObject jumpsMade;
     public GameObject dashesDone;
+    public GameObject restartButton;
 
     private void Awake()
     {
@@ -57,6 +58,8 @@ public class UiManager : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         jumpsMade.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText(GameManager.Instance.jumpsDone.ToString());
         jumpsMade.transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        restartButton.SetActive(true);
 
     }
 }

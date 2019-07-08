@@ -47,6 +47,7 @@ public class TrapPositon : MonoBehaviour
             default:
                 break;
         }
+        GameManager.Instance.trapsEncountered++;
     }
 
 
